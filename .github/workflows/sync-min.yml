@@ -45,8 +45,8 @@ jobs:
         run: |
           cd ./min-repo
           npm --no-git-tag-version version ${{ env.version }}
-          git config --global user.email = "E-MAIL GOES HERE"
-          git config --global user.name = "USERNAME GOES HERE"
+          git config --global user.email "E-MAIL GOES HERE"
+          git config --global user.name "USERNAME GOES HERE"
           git add .
           git commit -m "Update - ${{ env.version }}"
           git tag ${{ env.version }}
